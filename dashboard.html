@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Sales System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>Sales System</h2>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item active">📊 Dashboard</a>
+        <a href="sales.html" class="nav-item">🧾 Sales</a>
+        <a href="inventory.html" class="nav-item">📦 Inventory</a>
+        <a href="reports.html" class="nav-item">📈 Reports</a>
+        <a href="employees.html" class="nav-item">👥 Employees</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="login.html" class="nav-item logout">
+          🚪 Log Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- TOP BAR -->
+      <div class="topbar">
+        <div>
+          <h1 class="page-title">Dashboard</h1>
+          <p class="topbar-date" id="currentDate"></p>
+        </div>
+        <div class="topbar-user">
+          <span>Welcome, </span>
+          <strong>Admin</strong>
+        </div>
+      </div>
+
+      <!-- KPI CARDS -->
+      <section class="kpi-section">
+
+        <div class="kpi-card">
+          <p class="kpi-label">Today's Sales</p>
+          <h2 class="kpi-value" id="todaySales">₦0</h2>
+          <p class="kpi-sub">Total revenue today</p>
+        </div>
+
+        <div class="kpi-card">
+          <p class="kpi-label">Transactions</p>
+          <h2 class="kpi-value" id="totalTransactions">0</h2>
+          <p class="kpi-sub">Orders recorded today</p>
+        </div>
+
+        <div class="kpi-card">
+          <p class="kpi-label">Total Profit</p>
+          <h2 class="kpi-value" id="totalProfit">₦0</h2>
+          <p class="kpi-sub">After cost price</p>
+        </div>
+
+        <div class="kpi-card kpi-alert">
+          <p class="kpi-label">Low Stock</p>
+          <h2 class="kpi-value" id="lowStockCount">0</h2>
+          <p class="kpi-sub">Items need restocking</p>
+        </div>
+
+      </section>
+
+      <!-- RECENT SALES -->
+      <section class="section-box">
+        <div class="section-header">
+          <h3>Recent Sales</h3>
+          <button class="btn-secondary">View All</button>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+              <th>Employee</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="recentSalesBody">
+            <!-- filled by app.js -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- LOW STOCK ALERTS -->
+      <section class="section-box">
+        <div class="section-header">
+          <h3>⚠️ Low Stock Alerts</h3>
+          <button class="btn-secondary">Manage Inventory</button>
+        </div>
+
+        <div id="lowStockList" class="alert-list">
+          <!-- filled by app.js -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

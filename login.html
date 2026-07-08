@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-page">
+        <div class="login-box">
+            <h1>Sales System</h1>
+            <p class="subtitle">Please Log in to continue</p>
+
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Input Password</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <p id="errorMessage" class="error-message"></p>
+            </form>
+            </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
